@@ -24,7 +24,7 @@ class TurningSprite(arcade.Sprite):
     """ Sprite that sets its angle to the direction it is traveling in. """
     def update(self):
         super().update()
-        self.angle = math.degrees(math.atan2(self.change_y, self.change_x))
+        self.angle = math.degrees(math.atan2(self.change_y, self.change_x))-90  #fix for laseer-bullet effect angle
 
 
 class ShipSprite(arcade.Sprite):
