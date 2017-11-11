@@ -138,7 +138,7 @@ class MyApplication(arcade.Window):
         # Adjust the text position based on the view port so that we don't
         # scroll the text too.
         distance = self.view_left + self.player_sprite.right
-        output = u"Distance: "+ format(distance)   # Replaced f (f-string only works in Python 3.6 and will not be backported to previous versions) with u (unicode string)
+        output = "Distance: "+ format(distance)   # Replaced f (f-string only works in Python 3.6 and will not be backported to previous versions) with u (unicode string)
         if not self.distance_text or output != self.distance_text.text:
             self.distance_text = arcade.create_text(output, arcade.color.WHITE, 14)
 
