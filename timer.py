@@ -51,6 +51,7 @@ class MyApplication(arcade.Window):
         """
         self.total_time += delta_time
 
+ 
 
 window = MyApplication(SCREEN_WIDTH, SCREEN_HEIGHT)
 window.setup()
