@@ -35,7 +35,7 @@ class MyApplication(arcade.Window):
         seconds = int(self.total_time) % 60
 
         # Figure out our output
-        output = f"Time: {minutes:02d}:{seconds:02d}"
+        output = "Time minutes:" + format(minutes) + " seconds:" +  format(seconds) + "   "
 
         # See if the output is the same as last frame. If not, generate a new
         # text object.

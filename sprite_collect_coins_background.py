@@ -91,7 +91,7 @@ class MyApplication(arcade.Window):
         self.player_sprite.draw()
 
         # Put the text on the screen.
-        output = f"Score: {self.score}"
+        output = "Score: " + format(self.score)
 
         # Is this the same text as last frame? If not, set up a new text object
         if not self.score_text or output != self.score_text.text:

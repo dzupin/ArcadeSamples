@@ -219,7 +219,7 @@ class MyWindow(arcade.Window):
         self.all_sprites_list.draw()
 
         # Put the text on the screen.
-        output = f"Score: {self.score}"
+        output = "Score: "+ format(self.score)
         if not self.score_text or output != self.score_text.text:
             self.score_text = arcade.create_text(output, arcade.color.WHITE, 14)
         arcade.render_text(self.score_text, 10, 70)

@@ -23,7 +23,7 @@ class MyApplication(arcade.Window):
         # Create some text labels for our coordinates
         self.label_list = []
         for y in range(START, END, STEP):
-            my_text = arcade.create_text(f"{y}", arcade.color.BLACK, 12, anchor_x="left", anchor_y="bottom")
+            my_text = arcade.create_text(format(y), arcade.color.BLACK, 12, anchor_x="left", anchor_y="bottom")
             self.label_list.append(my_text)
 
     def on_resize(self, width, height):
@@ -33,7 +33,7 @@ class MyApplication(arcade.Window):
         # edges being -1 to 1.
         super().on_resize(width, height)
 
-        print(f"Window resized to: {width}, {height}")
+        print("Window resized to: " + format(width) + " , " + format(height))
 
     def on_draw(self):
         """ Render the screen. """

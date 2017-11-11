@@ -140,10 +140,10 @@ class MyApplication(arcade.Window):
         self.coin_list.draw()
 
         # Put the text on the screen.
-        output = f"Score: {self.score}"
+        output = "Score: " + format(self.score)
         arcade.draw_text(output, 10, 20, arcade.color.WHITE, 14)
 
-        output = f"Level: {self.level}"
+        output = "Level: " + format(self.level)
         arcade.draw_text(output, 10, 35, arcade.color.WHITE, 14)
 
 
