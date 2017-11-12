@@ -24,7 +24,7 @@ https://freesound.org/people/isteak/sounds/387232/
 """
 #NOTE: This code is set to run with Python 3.6 or newer (otherwise "import arcade" reports error even if arcade for Python2 is successfully installed)
 import random
-import arcade # After pip install of arcade, copy avlib.dll into avlib64.dll and then move avlib64.dll
+import arcade # After pip install of arcade, copy avlib.dll into avbin64.dll and then move avbin64.dll
               # from C:\Python\Python36\Lib\site-packages\arcade\Win64\    into C:\Windows\System32\
 import math
 import sys
