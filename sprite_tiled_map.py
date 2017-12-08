@@ -19,7 +19,7 @@ RIGHT_MARGIN = 150
 # Physics
 MOVEMENT_SPEED = 5
 JUMP_SPEED = 14
-GRAVITY = 0.5
+GRAVITY = 0
 
 
 def get_map(filename):
@@ -152,8 +152,9 @@ class MyApplication(arcade.Window):
         Called whenever the mouse moves.
         """
         if key == arcade.key.UP:
-            if self.physics_engine.can_jump():
-                self.player_sprite.change_y = JUMP_SPEED
+            self.player_sprite.change_y = MOVEMENT_SPEED
+        elif key == arcade.key.DOWN:
+            self.player_sprite.change_y = -MOVEMENT_SPEED
         elif key == arcade.key.LEFT:
             self.player_sprite.change_x = -MOVEMENT_SPEED
         elif key == arcade.key.RIGHT:
@@ -165,6 +166,8 @@ class MyApplication(arcade.Window):
         """
         if key == arcade.key.LEFT or key == arcade.key.RIGHT:
             self.player_sprite.change_x = 0
+        elif key == arcade.key.DOWN or key == arcade.key.UP:
+            self.player_sprite.change_y = 0
 
     def update(self, delta_time):
         """ Movement and game logic """

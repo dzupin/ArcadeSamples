@@ -547,7 +547,7 @@ class MyApplication(arcade.Window):
             self.curtime = 0
             self.room = 0
             self.health = 100
-            self.ammo = 5
+            self.ammo = 55
             self.knife_delay = 0
             self.knife_rate = 0
             self.setup()
@@ -702,7 +702,7 @@ class MyApplication(arcade.Window):
             # If it hits the player hurt them
             if not fireball.reflected:
                 if arcade.check_for_collision(fireball, self.player_sprite):
-                    self.health -= 25
+                    self.health -= 1
                     arcade.play_sound(self.sound_list[random.randint(7, 9)])
                     fireball.kill()
 
