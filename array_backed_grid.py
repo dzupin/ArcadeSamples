@@ -5,6 +5,7 @@ Show how to use a two-dimensional list/array to back the display of a
 grid on-screen.
 """
 import arcade
+import sys
 
 # Set how many rows and columns we will have
 ROW_COUNT = 10
@@ -32,7 +33,10 @@ class MyApplication(arcade.Window):
         """
         Set up the application.
         """
-        super().__init__(width, height)
+        if sys.version_info[0] > 2:
+            super().__init__(width, height)
+        else:
+            super(MyApplication,self).__init__(width, height)
         # Create a 2 dimensional array. A two dimensional
         # array is simply a list of lists.
         self.grid = []
